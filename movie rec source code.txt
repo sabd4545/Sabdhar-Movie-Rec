@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Movie Recommender</title>
+<style>
+/* CSS Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: #0f0f1a;
+color: #ffffff;
+line-height: 1.6;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+header {
+text-align: center;
+padding: 40px 0;
+background: linear-gradient(135deg, #6e00ff 0%, #ff00aa 100%);
+border-radius: 10px;
+margin-bottom: 30px;
+}
+
+h1 {
+font-size: 2.5rem;
+margin-bottom: 10px;
+}
+
+.tagline {
+font-size: 1.2rem;
+opacity: 0.9;
+}
+
+.search-box {
+display: flex;
+justify-content: center;
+margin: 30px 0;
+}
+
+.search-box input {
+padding: 15px 20px;
+width: 60%;
+border: none;
+border-radius: 30px 0 0 30px;
+font-size: 1rem;
+outline: none;
+}
+
+.search-box button {
+padding: 15px 25px;
+background: #6e00ff;
+color: white;
+border: none;
+border-radius: 0 30px 30px 0;
+cursor: pointer;
+font-size: 1rem;
+transition: background 0.3s;
+}
+
+.search-box button:hover {
+background: #5a00d1;
+}
+
+.features {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 40px 0;
+}
+
+.feature {
+flex-basis: 30%;
+background: #1e1e2d;
+padding: 25px;
+border-radius: 10px;
+margin-bottom: 20px;
+transition: transform 0.3s;
+}
+
+.feature:hover {
+transform: translateY(-5px);
+}
+
+.feature h3 {
+margin-bottom: 15px;
+color: #6e00ff;
+}
+
+.recommendations {
+margin: 50px 0;
+}
+
+.movie-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px;
+}
+
+.movie-card {
+background: #1e1e2d;
+border-radius: 8px;
+overflow: hidden;
+transition: transform 0.3s;
+}
+
+.movie-card:hover {
+transform: scale(1.05);
+}
+
+.movie-poster {
+width: 100%;
+height: 300px;
+object-fit: cover;
+}
+
+.movie-info {
+padding: 15px;
+}
+
+.movie-title {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.movie-year {
+color: #aaaaaa;
+font-size: 0.9rem;
+}
+
+footer {
+text-align: center;
+padding: 30px 0;
+margin-top: 50px;
+background: #1e1e2d;
+border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+.feature {
+flex-basis: 100%;
+}
+
+.search-box input {
+width: 70%;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>AI-Powered Movie Recommendations</h1>
+<p class="tagline">Discover your next favorite film with our intelligent recommendation engine</p>
+</header>
+
+<div class="search-box">
+<input type="text" placeholder="Tell us what movies you like...">
+<button>Get Recommendations</button>
+</div>
+
+<div class="features">
+<div class="feature">
+<h3>Personalized Suggestions</h3>
+<p>Our AI analyzes your preferences to suggest movies tailored just for you, learning from each interaction.</p>
+</div>
+
+<div class="feature">
+<h3>Mood-Based Filtering</h3>
+<p>Feeling happy, sad, or adventurous? Get recommendations that match your current mood.</p>
+</div>
+
+<div class="feature">
+<h3>Hidden Gems</h3>
+<p>Discover underrated films you might have missed, beyond just the popular choices.</p>
+</div>
+</div>
+
+<section class="recommendations">
+<h2>Recommended For You</h2>
+<div class="movie-grid">
+<!-- These would be dynamically generated in a real app -->
+<div class="movie-card">
+<img src="https://via.placeholder.com/300x450/6e00ff/ffffff?text=Movie+1" alt="Movie Poster" class="movie-poster">
+<div class="movie-info">
+<div class="movie-title">The AI Chronicles</div>
+<div class="movie-year">2023</div>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="https://via.placeholder.com/300x450/ff00aa/ffffff?text=Movie+2" alt="Movie Poster" class="movie-poster">
+<div class="movie-info">
+<div class="movie-title">Neon Dreams</div>
+<div class="movie-year">2022</div>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="https://via.placeholder.com/300x450/00ffaa/ffffff?text=Movie+3" alt="Movie Poster" class="movie-poster">
+<div class="movie-info">
+<div class="movie-title">Quantum Love</div>
+<div class="movie-year">2024</div>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="https://via.placeholder.com/300x450/aa00ff/ffffff?text=Movie+4" alt="Movie Poster" class="movie-poster">
+<div class="movie-info">
+<div class="movie-title">The Last Algorithm</div>
+<div class="movie-year">2021</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2023 AI Movie Recommender | Powered by Machine Learning</p>
+</footer>
+</div>
+</body>
+</html>
